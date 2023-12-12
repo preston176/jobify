@@ -12,21 +12,39 @@ import {
 const router = createBrowserRouter([
   {
     path: '/',
+    element: <HomeLayout />,
     errorElement: <Error />,
-    element: <Landing />,
+    children: [
+      {
+        index: true,
+        element: <Landing />,
+      },
+      {
+        path: 'register',
+        element: <Register />,
+      },
+      {
+        path: 'login',
+        element: <Login />,
+      },
+      {
+        path: 'dashboard',
+        element: <DashboardLayout />,
+      },
+    ]
   },
-  {
-    path: '/register',
-    element: <Register />,
-  },
-  {
-    path: '/login',
-    element: <Login />,
-  },
-  {
-    path: '/dashboard',
-    element: <DashboardLayout />,
-  },
+  // {
+  //   path: '/register',
+  //   element: <Register />,
+  // },
+  // {
+  //   path: '/login',
+  //   element: <Login />,
+  // },
+  // {
+  //   path: '/dashboard',
+  //   element: <DashboardLayout />,
+  // },
 
 ]);
 
