@@ -1,11 +1,22 @@
-import React from 'react'
+import styled from 'styled-components';
+import Wrapper from '../assets/wrappers/LandingPage';
+import main from "../assets/images/main.svg"
+import logo from "../assets/images/logo.svg"
+
+
 
 const Landing = () => {
     return (
-        <div>
-            Landing
-        </div>
-    )
-}
+        <Wrapper>
+            <nav>
+                <img src={logo} alt="jobify" className='logo' />
+            </nav>
+        </Wrapper>
+    );
+};
 
-export default Landing
+const StyledButton = styled.button`
+  background-color: red;
+  color: white;
+`;
+export default Landing;

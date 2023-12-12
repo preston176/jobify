@@ -12,7 +12,8 @@ import {
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <HomeLayout />,
+    errorElement: <Error />,
+    element: <Landing />,
   },
   {
     path: '/register',
