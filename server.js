@@ -19,6 +19,12 @@ app.use('*', (req, res) => {
     res.status(404).json({ msg: 'not found' });
 });
 
+//ERROR MIDDLEWARE
+app.use((err, req, res, next) => {
+    console.log(err);
+    res.status(500).json({ msg: 'something went wrong' });
+});
+
 app.get('/', (req, res) => {
     res.send('Hello World');
 });
