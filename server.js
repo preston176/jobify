@@ -14,6 +14,10 @@ if (process.env.NODE_ENV === 'development') {
     app.use(morgan('dev'));
 }
 app.use(express.json());
+// NOT FOUND MIDDLEWARE
+app.use('*', (req, res) => {
+    res.status(404).json({ msg: 'not found' });
+});
 
 app.get('/', (req, res) => {
     res.send('Hello World');
