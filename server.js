@@ -52,12 +52,19 @@ app.post('/api/v1/jobs', (req, res) => {
     res.status(200).json({ job });
 });
 
+// GET ALL JOBS
+app.get('/api/v1/jobs', (req, res) => {
+    // console.log(jobss);
+    res.status(200).json({ jobs });
+});
+
 // GET SINGLE JOB
 
 app.get('/api/v1/jobs/:id', (req, res) => {
     const { id } = req.params;
     const job = jobs.find((job) => job.id === id);
     if (!job) {
+        throw new Error('no job with that id');
         return res.status(404).json({ msg: `no job with id ${id}` });
     }
     res.status(200).json({ job });
