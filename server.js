@@ -4,6 +4,8 @@ import morgan from 'morgan';
 import * as dotenv from 'dotenv';
 dotenv.config();
 import { nanoid } from 'nanoid';
+import jobRouter from './routers/jobRouter.js';
+app.use('/api/v1/jobs', jobRouter);
 
 let jobs = [
     { id: nanoid(), company: 'apple', position: 'front-end' },
