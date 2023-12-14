@@ -3,6 +3,12 @@ const app = express();
 import morgan from 'morgan';
 import * as dotenv from 'dotenv';
 dotenv.config();
+import { nanoid } from 'nanoid';
+
+let jobs = [
+    { id: nanoid(), company: 'apple', position: 'front-end' },
+    { id: nanoid(), company: 'google', position: 'back-end' },
+];
 
 if (process.env.NODE_ENV === 'development') {
     app.use(morgan('dev'));
@@ -13,6 +19,9 @@ app.get('/', (req, res) => {
     res.send('Hello World');
 });
 
+app.get('/api/v1/jobs', (req, res) => {
+    res.status(200).json({ jobs });
+});
 
 app.post('/', (req, res) => {
     console.log(req);
@@ -22,5 +31,5 @@ app.post('/', (req, res) => {
 
 const port = process.env.PORT || 5100;
 app.listen(port, () => {
-  console.log(`server running on PORT ${port}....`);
+    console.log(`server running on PORT ${port}....`);
 });
