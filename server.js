@@ -8,6 +8,7 @@ import jobRouter from './routers/jobRouter.js';
 app.use('/api/v1/jobs', jobRouter);
 import notFoundMiddleware from './middleware/not-found.js';
 import errorHandlerMiddleware from './middleware/error-handler.js';
+import connectDB from './db/connect.js';
 
 let jobs = [
     { id: nanoid(), company: 'apple', position: 'front-end' },
@@ -112,6 +113,19 @@ app.delete('/api/v1/jobs/:id', (req, res) => {
 
 
 const port = process.env.PORT || 5100;
-app.listen(port, () => {
-    console.log(`server running on PORT ${port}....`);
-});
+// app.listen(port, () => {
+//     console.log(`server running on PORT ${port}....`);
+// });
+
+const start = async () => {
+    try {
+        await connectDB(process.env.MONGO_URL)
+        app.listen(port, () => {
+            console.log(`server running on PORT ${port}....`);
+        });
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+start()
