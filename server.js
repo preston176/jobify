@@ -6,6 +6,7 @@ dotenv.config();
 import { nanoid } from 'nanoid';
 import jobRouter from './routers/jobRouter.js';
 app.use('/api/v1/jobs', jobRouter);
+import notFoundMiddleware from './middleware/not-found.js';
 
 let jobs = [
     { id: nanoid(), company: 'apple', position: 'front-end' },
@@ -17,9 +18,10 @@ if (process.env.NODE_ENV === 'development') {
 }
 app.use(express.json());
 // NOT FOUND MIDDLEWARE
-app.use('*', (req, res) => {
-    res.status(404).json({ msg: 'not found' });
-});
+// notFoundMiddleware
+// app.use('*', (req, res) => {
+//     res.status(404).json({ msg: 'not found' });
+// });
 
 //ERROR MIDDLEWARE
 app.use((err, req, res, next) => {
@@ -30,6 +32,8 @@ app.use((err, req, res, next) => {
 app.get('/', (req, res) => {
     res.send('Hello World');
 });
+
+app.use(notFoundMiddleware)
 
 app.get('/api/v1/jobs', (req, res) => {
     res.status(200).json({ jobs });
@@ -103,6 +107,7 @@ app.delete('/api/v1/jobs/:id', (req, res) => {
 
     res.status(200).json({ msg: 'job deleted' });
 });
+
 
 const port = process.env.PORT || 5100;
 app.listen(port, () => {
