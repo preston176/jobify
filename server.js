@@ -7,6 +7,7 @@ import { nanoid } from 'nanoid';
 import jobRouter from './routers/jobRouter.js';
 app.use('/api/v1/jobs', jobRouter);
 import notFoundMiddleware from './middleware/not-found.js';
+import errorHandlerMiddleware from './middleware/error-handler.js';
 
 let jobs = [
     { id: nanoid(), company: 'apple', position: 'front-end' },
@@ -24,16 +25,17 @@ app.use(express.json());
 // });
 
 //ERROR MIDDLEWARE
-app.use((err, req, res, next) => {
-    console.log(err);
-    res.status(500).json({ msg: 'something went wrong' });
-});
+// app.use((err, req, res, next) => {
+//     console.log(err);
+//     res.status(500).json({ msg: 'something went wrong' });
+// });
 
 app.get('/', (req, res) => {
     res.send('Hello World');
 });
 
 app.use(notFoundMiddleware)
+app.use(errorHandlerMiddleware)
 
 app.get('/api/v1/jobs', (req, res) => {
     res.status(200).json({ jobs });
