@@ -6,8 +6,11 @@ dotenv.config();
 import { nanoid } from 'nanoid';
 import jobRouter from './routers/jobRouter.js';
 app.use('/api/v1/jobs', jobRouter);
+
+// middlewares
 import notFoundMiddleware from './middleware/not-found.js';
 import errorHandlerMiddleware from './middleware/error-handler.js';
+
 import connectDB from './db/connect.js';
 
 let jobs = [
