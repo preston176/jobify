@@ -2,11 +2,13 @@
 
 Jobify is a sophisticated web application crafted with the MERN (MongoDB, Express.js, React, Node.js) stack. It serves as a comprehensive platform for job seekers, facilitating the seamless discovery and application process for enticing job opportunities.
 
+- You can Add, Delete, Create Jobs 
+
 ## Demo
 
 ![Alt text](demo.png)
 
-- ![Live Link]()
+- ![Live Link](https://jobify-app-3o5e.onrender.com/)
 
 ## Table of Contents
 
