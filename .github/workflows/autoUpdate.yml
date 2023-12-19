@@ -1,0 +1,28 @@
+name: Auto_Update README in SubDir
+
+on:
+  push:
+    paths:
+      - '.\README.md'  # Adjust the path to your source file
+
+jobs:
+  copy-file:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Copy File
+      run: |
+        cd client
+        cp .\README.md .\client\README.md
+      # Adjust the paths accordingly
+
+    - name: Commit and Push Changes
+      run: |
+        git config user.name "GitHub Action"
+        git config user.email "action@github.com"
+        git add .
+        git commit -m "Auto_Update README in SubDir"
+        git push
