@@ -3,7 +3,7 @@ import * as dotenv from 'dotenv';
 dotenv.config();
 import express from 'express';
 const app = express();
-const cors = require('cors');
+import cors from "cors";
 import morgan from 'morgan';
 import mongoose from 'mongoose';
 import cookieParser from 'cookie-parser';
