@@ -8,6 +8,8 @@ Jobify is a sophisticated web application crafted with the MERN (MongoDB, Expres
 
 ![Alt text](demo.png)
 
+![Demo 2](image.png)
+
 - ![Live Link](https://jobify-app-3o5e.onrender.com/)
 
 ## Table of Contents
