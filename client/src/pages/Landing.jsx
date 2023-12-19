@@ -16,10 +16,7 @@ const Landing = () => {
             job <span>tracking</span> app
           </h1>
           <p>
-            I'm baby wayfarers hoodie next level taiyaki brooklyn cliche blue
-            bottle single-origin coffee chia. Aesthetic post-ironic venmo,
-            quinoa lo-fi tote bag adaptogen everyday carry meggings +1 brunch
-            narwhal.
+            Need a job ? You are in the right place. Get started by clicking in either of the links below:
           </p>
           <Link to='/register' className='btn register-link'>
             Register

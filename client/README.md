@@ -2,9 +2,16 @@
 
 Jobify is a sophisticated web application crafted with the MERN (MongoDB, Express.js, React, Node.js) stack. It serves as a comprehensive platform for job seekers, facilitating the seamless discovery and application process for enticing job opportunities.
 
+## Demo
+
+![Alt text](demo.png)
+
+- ![Live Link]()
+
 ## Table of Contents
 
 - [Jobify - MERN Stack App](#jobify---mern-stack-app)
+  - [Demo](#demo)
   - [Table of Contents](#table-of-contents)
   - [Features](#features)
   - [Technologies Used](#technologies-used)
@@ -25,9 +32,16 @@ Jobify is a sophisticated web application crafted with the MERN (MongoDB, Expres
 ## Technologies Used
 
 - **MongoDB**: A robust NoSQL database for efficient data storage.
+![Alt MongoDb](https://webassets.mongodb.com/_com_assets/cms/mongodb_logo1-76twgcu2dm.png)
 - **Express.js (Backend)**: A minimalist and flexible Node.js web application framework.
+![Express](https://expressjs.com/images/express-facebook-share.png)
+
 - **Node.js (Runtime for Backend)**: A powerful JavaScript runtime for server-side development.
+![Node](https://nodejs.org/static/images/logos/nodejs-new-pantone-black.svg)
+
 - **React.js (Frontend)**: A declarative and efficient JavaScript library for building user interfaces.
+
+![React](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1280px-React-icon.svg.png)
 
 ## Prerequisites
 
