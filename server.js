@@ -6,8 +6,8 @@ dotenv.config();
 import { nanoid } from 'nanoid';
 import jobRouter from './routers/jobRouter.js';
 app.use('/api/v1/jobs', jobRouter);
-import authRouter from './routers/authRouter.js';
-app.use('/api/v1/auth', authRouter);
+import router from './routers/authRouter.js';
+app.use('/api/v1/auth', router);
 
 // middlewares
 import notFoundMiddleware from './middleware/not-found.js';
