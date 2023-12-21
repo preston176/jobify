@@ -4,11 +4,15 @@ import main from '../assets/images/main.svg';
 import { Link } from 'react-router-dom';
 import { Logo } from '../components';
 
+
 const Landing = () => {
   return (
     <Wrapper>
-      <nav>
+      <nav className='navbar'>
         <Logo />
+        <div className="nav"><ul>
+          <li><Link to="/about" className='btn about'>About</Link></li>
+        </ul></div>
       </nav>
       <div className='container page'>
         <div className='info'>

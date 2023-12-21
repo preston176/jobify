@@ -86,8 +86,8 @@ html {
 body {
   background: var(--background-color);
   color: var(--text-color);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 400;
   line-height: 1;
 }
@@ -328,4 +328,15 @@ button:disabled {
 .declined {
   background: #ffeeee;
   color: #d66a6a;
+}
+
+/* navbar */
+.navbar {
+  display: flex;
+  color: #647acb;
+  justify-content: space-between;
+}
+.navbar ul {
+  display: flex;
+  gap: 0 2rem;
 }

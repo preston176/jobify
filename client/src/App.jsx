@@ -29,6 +29,7 @@ import { loader as adminLoader } from './pages/Admin';
 import { action as profileAction } from './pages/Profile';
 import { loader as statsLoader } from './pages/Stats';
 import ErrorElement from './components/ErrorElement';
+import About from './pages/About';
 
 export const checkDefaultTheme = () => {
   const isDarkTheme = localStorage.getItem('darkTheme') === 'true';
@@ -65,6 +66,10 @@ const router = createBrowserRouter([
         path: 'login',
         element: <Login />,
         action: loginAction(queryClient),
+      },
+      {
+        path: 'about',
+        element: <About />,
       },
       {
         path: 'dashboard',
