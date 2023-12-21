@@ -15,6 +15,7 @@ import {
   Profile,
   Admin,
   EditJob,
+  Contact
 } from './pages';
 
 import { action as registerAction } from './pages/Register';
@@ -70,6 +71,10 @@ const router = createBrowserRouter([
       {
         path: 'about',
         element: <About />,
+      },
+      {
+        path: 'contact',
+        element: <Contact />,
       },
       {
         path: 'dashboard',

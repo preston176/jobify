@@ -9,9 +9,10 @@ const Landing = () => {
   return (
     <Wrapper>
       <nav className='navbar'>
-        <Logo />
+        <Link to="/"> <Logo /></Link>
         <div className="nav"><ul>
           <li><Link to="/about" className='btn about'>About</Link></li>
+          <li><Link to="/contact" className='btn about'>Contact Us</Link></li>
         </ul></div>
       </nav>
       <div className='container page'>
